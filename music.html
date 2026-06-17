@@ -5,44 +5,43 @@
   <title>Study Oddparents - Music</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Oddparents - Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-  <aside class="sidebar">
-    <ul>
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="flashcards.html">Flashcards</a></li>
-      <li><a href="quotes.html">Quotes</a></li>
-      <li><a href="music.html" class="active">Music</a></li>
-    </ul>
-  </aside>
+  <!-- Shared layout will be injected here -->
+  <div id="layout"></div>
 
   <main class="content">
-    <h2>Study Music</h2>
+    <h2>Study Music (Jamendo)</h2>
 
-    <div class="music-card">
-      <span class="icon">🎵</span>
-      <h3 id="nowPlaying">Lofi Beats</h3>
-      <p>Now Playing</p>
+    <!-- Playlist dropdown -->
+    <div class="music-controls">
+      <label for="playlistSelect">Choose a playlist:</label>
+      <select id="playlistSelect"></select>
     </div>
 
-    <label for="playlistSelect">Select Playlist:</label>
-    <select id="playlistSelect">
-      <option value="lofi">Lofi Beats</option>
-      <option value="focus">Focus Mix</option>
-      <option value="chill">Chill Vibes</option>
-    </select>
-
-    <div class="controls">
-      <button id="prevBtn">⏮️</button>
-      <button id="playBtn">▶️</button>
-      <button id="nextBtn">⏭️</button>
+    <!-- Now playing -->
+    <div id="nowPlaying" class="music-card">
+      <p>No track playing yet.</p>
     </div>
 
-    <footer class="footer">
-      <span>🔥 Study Streak: 7 days</span>
-      <span>© 2026 The Study Oddparents</span>
-    </footer>
+    <!-- Playback controls -->
+    <div class="nav-buttons">
+      <button id="playBtn">Play ▶️</button>
+      <button id="pauseBtn">Pause ⏸️</button>
+      <button id="nextBtn">Next ⏭️</button>
+    </div>
   </main>
 
-  <script src="js/music.js"></script>
+  <!-- Script -->
+  <script type="module" src="js/music.js"></script>
 </body>
 </html>

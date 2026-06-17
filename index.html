@@ -43,31 +43,32 @@
 
   <main class="content">
     <h2>Dashboard</h2>
+
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="card-streak">🔥 Day Streak</span>
-        <p id="streak">0 Day Streak</p>
+        <span class="icon">🔥</span>
+        <p id="dayStreak">0 Day Streak</p>
+        <div class="progress-bar"><div id="streakBar"></div></div>
       </div>
+
       <div class="stat-card">
-        <span class="card-flashcard">🃏 Flashcards</span>
+        <span class="icon">📝</span>
         <p id="flashcards">0 Flashcards</p>
+        <div class="progress-bar"><div id="flashBar"></div></div>
       </div>
+
       <div class="stat-card">
-        <span class="card-done">✔️ Cards Done</span>
-        <p id="cardsDone">0 Cards Done</p>
-      </div>
-      <div class="stat-card">
-        <span class="card-quotes">💬 Quotes</span>
+        <span class="icon">💬</span>
         <p id="quotes">0 Quotes</p>
+        <div class="progress-bar"><div id="quoteBar"></div></div>
       </div>
     </div>
 
-    <div class="motivation">
+    <div class="motivation" id="motivationMsg">
       <h3>Keep it up! You're doing great 🎉</h3>
     </div>
   </main>
 
-  <!-- Use type="module" so ES imports work -->
   <script type="module" src="js/dashboard.js"></script>
 </body>
 
