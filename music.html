@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Oddparents - Music</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="flashcards.html">Flashcards</a></li>
+      <li><a href="quotes.html">Quotes</a></li>
+      <li><a href="music.html" class="active">Music</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <h2>Study Music</h2>
+
+    <div class="music-card">
+      <span class="icon">🎵</span>
+      <h3 id="nowPlaying">Lofi Beats</h3>
+      <p>Now Playing</p>
+    </div>
+
+    <label for="playlistSelect">Select Playlist:</label>
+    <select id="playlistSelect">
+      <option value="lofi">Lofi Beats</option>
+      <option value="focus">Focus Mix</option>
+      <option value="chill">Chill Vibes</option>
+    </select>
+
+    <div class="controls">
+      <button id="prevBtn">⏮️</button>
+      <button id="playBtn">▶️</button>
+      <button id="nextBtn">⏭️</button>
+    </div>
+
+    <footer class="footer">
+      <span>🔥 Study Streak: 7 days</span>
+      <span>© 2026 The Study Oddparents</span>
+    </footer>
+  </main>
+
+  <script src="js/music.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - The Study OddParents</title>
+  <meta name="description"
+    content="The Study OddParents will guide into your study journey with flashcards, quotes, and music to keep you motivated.">
+  <meta name="author" content="Samantha Salazar">
+  <link rel="icon" href="images/favicon.ico">
+  <meta property="og:title" content="The Study OddParents">
+  <meta property="og:description"
+    content="The Study OddParents will guide into your study journey with flashcards, quotes, and music to keep you motivated.">
+  <meta property="og:url" content="http://sqsaay.github.io/studyoddparents">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://sqsaay.github.io/studyoddparents/images/TSO_Logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Study OddParents">
+
+  <!--CSS & Scripts-->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--Google fonts  Titles-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Quicksand:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!--End Google fonts  -->
+  <!--Google fonts  Body-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!--End Google fonts  -->
+</head>
+
+<body>
+  <!-- Shared layout will be injected here -->
+  <div id="layout"></div>
+
+  <main class="content">
+    <h2>Study Flashcards</h2>
+
+    <!-- Topic search -->
+    <div class="search-box">
+      <input type="text" id="topicInput" placeholder="Enter a topic to study">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Flashcard display -->
+    <div id="flashcardDisplay"></div>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="newTopicBtn">New Topic</button>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script type="module" src="js/flashcards.js"></script>
+</body>
+
+</html>

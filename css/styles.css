@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #14405C;
+    --secondary-color: #FEF100;
+    --third-color: #DBE9F6;
+    --fourth-color: #030301;
+    --primary-accent-color: #FEF100;
+    --secondary-accent-color: #14405C;
+    --tertiary-accent-color: #030301;
+    --quarternary-accent-color: #DBE9F6;
+    --title-font: "Bitcount Prop Single", system-ui;
+    --body-font: "Quicksand", sans-serif;
+
+}
+
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+}
+
+/*#region Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-accent-color);
+    height: 70px;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-family: var(--title-font);
+    background-color: var(--primary-accent-color);
+    font-size: larger;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-family: var(--body-font);
+    background-color: var(--primary-accent-color);
+    font-size: medium;
+    padding: 10px;
+}
+
+/*#endregion Header*/
+
+/*#region Sidebar*/
+.sidebar {
+
+    width: 200px;
+    background-color: var(--primary-color);
+    height: calc(86.3vh - 70px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    /* Adjust based on header height */
+}
+
+.nav ul {
+    display: flex;
+    color: var(--primary-accent-color);
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.nav ul li a {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.nav ul li a.active {
+    color: var(--quarternary-accent-color);
+    text-decoration: underline;
+}
+
+/*#endregion Sidebar*/
+
+/*#region Main Content*/
+h2{
+    padding: 20px;
+}
+.content {
+    position: fixed;
+    left: 200px;
+    top: 70px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--third-color);
+    width: calc(100% - 200px);
+    height: calc(100vh - 200px);
+    border-radius: 10px;
+}
+
+/*#endregion Main Content*/
+
+/*#region Flashcards*/
+.flashcard {
+    width: 300px;
+    height: 180px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+#flashcardDisplay p{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+
+}
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    background: linear-gradient(135deg, purple, blue);
+    color: white;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-buttons button,
+.search-box button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.search-box input {
+    margin: 40px;
+    padding: 10px;
+    width: 400px;
+    font-size: 1em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/*#endregion Flashcards*/
+/*#region Quotes*/
+.quote-card {
+  width: 400px;
+  min-height: 120px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--tertiary-accent-color), var(--secondary-accent-color));
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*#endregion Quotes*/
+
+/*#region Footer*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-accent-color);
+    font-weight: bolder;
+    height: 70px;
+}
+
+/*#endregion Footer*/
