@@ -18,7 +18,7 @@
     font-family: var(--body-font);
 }
 
-/* Hamburger button */
+/*#region Hamburger button */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -36,7 +36,7 @@
 }
 
 /*#endregion Hamburguer*/
-/* Global transition theme */
+/*#region Global transition theme */
 body {
     display: flex;
     flex-direction: column;
@@ -60,7 +60,6 @@ body {
 
 .content {
     flex: 1;
-    /* take remaining space */
     transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
@@ -68,6 +67,7 @@ body {
     transform: scale(1.01);
 }
 
+/*#endregion Global transition theme */
 /*#region Header*/
 header {
     display: flex;
@@ -408,10 +408,22 @@ footer:hover {
 @media (max-width: 700px) and (min-width: 320px) {
     .hamburger {
         display: flex;
+        height: 50px;
+
     }
 
-    header{
-        width: 100%;
+    header {
+        min-width: 320px;
+        font-size: 50%;
+    }
+
+    .stats-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .music-card {
+        width: 80%;
     }
 
     .sidebar {
@@ -433,33 +445,48 @@ footer:hover {
         position: relative;
         left: 0;
         top: 70px;
-        width: 100%;
-        margin: 10px;
+        width: 80%;
+        margin: 10px auto;
         height: auto;
         border-radius: 0;
-        padding-bottom: 20px;
+        padding: 15px;
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .search-box input,
+    .search-box button {
+        width: 80%;
     }
 
-    .stat-card,
-    .quote-card,
-    .music-card,
-    .flashcard {
+    .stat-card {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 0.9em;
+    }
+
+
+    .nav-buttons button {
+        gap: 0px;
+        margin: 0px;
+    }
+
+    .quote-card {
+        width: 95%;
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .search-box button {
         width: 90%;
-        margin: 10px auto;
     }
 
-    .nav-buttons {
-        flex-direction: row;
-        gap: 10px;
+    .music-controls {
+        display: flex;
+        flex-direction: column;
     }
 
     footer {
         position: absolute;
+        min-width: 320px;
         width: 100%;
         bottom: 0;
         z-index: 1000;
