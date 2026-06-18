@@ -20,4 +20,8 @@ export async function loadLayout() {
       link.classList.remove("active");
     }
   });
+
+  document.getElementById("hamburger").addEventListener("click", () => {
+    document.querySelector(".sidebar").classList.toggle("active");
+  });
 }
